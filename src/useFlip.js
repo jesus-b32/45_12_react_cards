@@ -6,6 +6,8 @@ import {useState} from "react";
 function useFlip () {
     const [isFacingUp, setIsFacingUp] = useState(true);
     const flipCard = () => {
+        //arrow function key is used to access the previous state value. 
+        //This is really important if the next state depends on it
         setIsFacingUp(isUp => !isUp);
     };
 

@@ -7,6 +7,11 @@ import "./PlayingCard.css"
 function PlayingCard({ front, back = backOfCard }) {
   const [isFacingUp, setIsFacingUp] = useFlip();
 
+  // const [isFacingUp, setIsFacingUp] = useState(true);
+  // const flipCard = () => {
+  //   setIsFacingUp(isUp => !isUp);
+  // };
+
   return (
     <img
       src={isFacingUp ? front : back}
